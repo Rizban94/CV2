@@ -27,6 +27,14 @@ body {
   padding: 0 15px;
 }
 
+.section {
+  padding: 60px 0;
+}
+.section-title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .header {
   background-color: var(--accent);
 }
@@ -60,11 +68,119 @@ body {
 .menu-link {
   font-size: 12px;
   line-height: 12px;
-  padding:15px 15px;
+  padding: 15px 15px;
   text-transform: uppercase;
   transition: background-color 0.3s;
 }
 
 .menu-link:hover {
   background-color: var(--accent-light);
+}
+
+.intro-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.int-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+.intro-text {
+  width: 50%;
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.intro-text h1 {
+  margin: 0 0 15px;
+}
+
+.contacts {
+  margin-bottom: 60px;
+}
+.contacts ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 35px;
+  justify-content: center;
+  text-align: center;
+}
+
+.skills {
+  color: var(--pure-white);
+  background-color: var(--accent);
+}
+
+.skills ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 15px;
+}
+
+.skills li {
+  padding: 10px 25px;
+  background-color: var(--accent-light);
+  border-radius: 4px;
+}
+
+.example {
+  text-align: center;
+}
+
+.code-title {
+  text-align: center;
+}
+
+.example pre {
+  width: 55%;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 1em;
+  color: var(--pure-white);
+  background-color: var(--accent);
+  border-radius: 8px;
+}
+
+.education ul,
+.language ul {
+  text-align: center;
+  color: var(--pure-white);
+  background-color: var(--accent);
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 1em;
+  list-style: none;
+  justify-content: center;
+}
+.language a {
+  color: var(--pure-white);
+}
+
+.links {
+  display: flex;
+  gap: 30px;
+  text-align: center;
+  justify-content: center;
+}
+
+.reg {
+  justify-content: center;
+  text-align: center;
+  background-color: var(--accent);
+  color: var(--pure-white);
+}
+.reg a {
+  color: var(--pure-white);
 }
