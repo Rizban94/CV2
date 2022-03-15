@@ -3,44 +3,32 @@
   --accent-light: #3764a7;
   --pure-white: #fff;
 }
-
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
-
 body {
-  font-family: "Open-sans", sans-serif;
   margin: 0;
-  color: var(--accent);
+  font-family: "open sans", sans-serif;
+  color: var(--accent-light);
 }
-
 .container {
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
+  /* border: 1px solid black; */
 }
-
-.section {
-  padding: 60px 0;
-}
-.section-title {
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .header {
   background-color: var(--accent);
 }
 
 .header a {
-  color: var(--pure-white);
   text-decoration: none;
 }
 
@@ -56,13 +44,21 @@ body {
   width: 20;
   font-size: 22px;
   font-weight: 500;
+  color: var(--pure-white);
 }
 
 .menu {
   margin: 0;
   padding: 0;
-  list-style: none;
   display: flex;
+}
+.menu li {
+  padding: 10px 0;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .menu-link {
@@ -77,44 +73,49 @@ body {
   background-color: var(--accent-light);
 }
 
-.intro-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 35px;
+.intro-inner {
+  text-align: center;
+  margin: 20px;
 }
 
-.int-img {
+.intro-col img {
+  width: 250%;
   width: 250px;
-  height: 250px;
   border-radius: 50%;
 }
-.intro-text {
-  width: 50%;
-  margin: 0 0 10px;
-  font-size: 1.2em;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.intro-text h1 {
-  margin: 0 0 15px;
+.section-title {
+  text-align: center;
 }
 
 .contacts {
-  margin-bottom: 60px;
+  text-align: center;
+  margin: 20px;
 }
-.contacts ul {
+
+.contacts-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contacts-list li {
+  /* border: 2px solid var(--accent); */
+  margin-bottom: 30px;
+  border-radius: 10px;
+  padding: 15px;
+}
+.skills {
+  background-color: var(--accent);
+  color: #fff;
+  padding: 20px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
-  gap: 35px;
-  justify-content: center;
-  text-align: center;
+  gap: 15px;
 }
-
-.skills {
+.skills-list {
   color: var(--pure-white);
   background-color: var(--accent);
 }
@@ -133,54 +134,93 @@ body {
   padding: 10px 25px;
   background-color: var(--accent-light);
   border-radius: 4px;
+  margin: 20px;
 }
 
-.example {
-  text-align: center;
-}
-
-.code-title {
-  text-align: center;
-}
-
-.example pre {
-  width: 55%;
-  text-align: left;
-  margin: 0 auto;
-  font-size: 1em;
-  color: var(--pure-white);
+.languages {
   background-color: var(--accent);
-  border-radius: 8px;
+  color: #fff;
+  padding: 15px;
 }
-
-.education ul,
-.language ul {
-  text-align: center;
-  color: var(--pure-white);
-  background-color: var(--accent);
-  border-radius: 8px;
+.education {
   padding: 20px;
-  font-size: 1em;
-  list-style: none;
-  justify-content: center;
 }
-.language a {
-  color: var(--pure-white);
-}
-
-.links {
-  display: flex;
-  gap: 30px;
+.footer {
   text-align: center;
-  justify-content: center;
 }
+@media (min-width: 768px) {
+  .intro-inner {
+    display: flex;
+  }
+  .intro-col {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-radius: 50%;
+  }
+  .intro-col2 {
+    width: 50%;
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  .contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .contacts-list li {
+    width: 48%;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .menu-toggle {
+    display: none;
+  }
+  .menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    background-color: var(--accent);
+    list-style: none;
+  }
 
-.reg {
-  justify-content: center;
-  text-align: center;
-  background-color: var(--accent);
-  color: var(--pure-white);
-}
-.reg a {
-  color: var(--pure-white);
+  .menu a {
+    padding: 15px 30px;
+    color: var(--pure-white);
+    background-color: var(--accent);
+    border-radius: 4px;
+  }
+  .contacts-list {
+    justify-content: center;
+  }
+  .contacts-list li {
+    width: 32%;
+    margin-bottom: 0;
+  }
+  .skills ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .intro-col img {
+    width: 250%;
+    width: 250px;
+    border-radius: 50%;
+  }
+
+  .intro-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
